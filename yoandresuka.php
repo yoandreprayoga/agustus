@@ -5,20 +5,20 @@ echo "\e[95m==================================================\n";
 echo
  "\e[93m            \e[96mVOCER LIMA BELAS RIBU \e[93m \n";
 echo "\e[32m==================================================\n";
-echo color("yellow","Masukin Tokennya : ");
+echo color("yellow","ENTER TOKEN ID : ");
 $token = trim(fgets(STDIN));
-echo "\n".color("red","Brazil Redy To LOSE?: y/n ");
+echo "\n".color("red","UDAH SUBSCRIBE CHANNEL Yoandre Prayoga Belum?: y/n ");
         $pilihan = trim(fgets(STDIN));
         if($pilihan == "y" || $pilihan == "Y"){
-        echo color("green","=======>TAPI BOONG!!!!<========");
-        echo "\n".color("yellow","Sebentar");
+        echo color("green","KALO UDAH SKUY LANJUT");
+        echo "\n".color("yellow","Wait...");
         for($a=1;$a<=3;$a++){
         echo color("white",".");
         sleep(3);
         }
         $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"PENGENGOFOOD2107"}');
         $message = fetch_value($code1,'"message":"','"');
-        if(strpos($code1, 'Mantap Udah Dapet BosQuu')){
+        if(strpos($code1, 'VOUCHER BERHASIL DI CLAIM')){
         echo "\n".color("green"," Message: ".$message);
         }else{
         echo "\n".color("green"," Message: ".$message);
@@ -40,7 +40,7 @@ echo "\n".color("red","Brazil Redy To LOSE?: y/n ");
         $voucher13 = getStr1('"title":"','",',$cekvoucher,"13");
         $voucher14 = getStr1('"title":"','",',$cekvoucher,"14");
         $voucher15 = getStr1('"title":"','",',$cekvoucher,"15");
-        echo "\n".color("green"," KAMU DAPET INI BRO  ".$total." : ");
+        echo "\n".color("green"," VOUCHER YANG BERHASIL DI CLAIM  ".$total." : ");
         echo "\n".color("yellow"," 1. ".$voucher1);
         echo "\n".color("yellow"," 2. ".$voucher2);
         echo "\n".color("yellow"," 3. ".$voucher3);
